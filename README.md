@@ -118,5 +118,4 @@ cp $DATA_DIR/secrets/node.key $BACKUP_DIR
 ##  useful commands
 see logs<code>journalctl -f -u $DAEMON</code>
 
-see node id 
-<code>curl --silent -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "system_localPeerId" }' http://localhost:9933 |jq ."result"<code>
+see node id <code>curl --silent -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "system_localPeerId" }' http://localhost:9933 |jq ."result"<code>
