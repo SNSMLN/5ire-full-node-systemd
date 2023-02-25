@@ -44,7 +44,7 @@ docker cp $DOCKER_NAME:5ire/thunder-chain-spec.json $DATA_DIR/thunder-chain-spec
 echo "export PATH=$PATH:$BIN_DIR" >> $HOME/.bash_profile
 </code>
 
-## test-run.sh 
+## test-run
 <code> NAME=YOUR_NODE_NAME
   $BIN_DIR/5irechain \\
     --no-telemetry \\
