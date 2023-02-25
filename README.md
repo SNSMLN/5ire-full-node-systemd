@@ -115,7 +115,23 @@ journalctl -f -u $DAEMON
 cp $DATA_DIR/secrets/node.key $BACKUP_DIR
 </code>
 
-##  useful commands
-see logs<code>journalctl -f -u $DAEMON</code>
+## open ports
+<code>sudo ufw allow 9933/tcp
+sudo ufw allow 9944/tcp
+sudo ufw allow 30333/tcp
 
-see node id <code>curl --silent -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "system_localPeerId" }' http://localhost:9933 |jq ."result"<code>
+sudo ufw status | grep -e 9933 -e 9944 -e 30333
+</code>
+
+
+##  useful commands
+see logs
+
+<code>journalctl -n 100 -f -u $DAEMON | grep -v \\
+    -e "✨ Imported" \\
+    -e "💤 Idle" \\
+    -e "♻ ️  Reorg"</code>
+
+see node id 
+
+<code>curl --silent -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "system_localPeerId" }' http://localhost:9933 |jq ."result"<code>
