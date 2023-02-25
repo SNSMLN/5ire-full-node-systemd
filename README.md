@@ -1,4 +1,4 @@
-# 5ire-systemd
+# 5ire full node systemd
 start 5ire full node as normal service systemd
 
 The fight against docker crafts continues. 
