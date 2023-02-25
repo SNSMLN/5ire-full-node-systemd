@@ -31,7 +31,6 @@ docker --version
 DOCKER_NAME=5ire-thunder-node
 docker pull $IMAGE
 docker create --name $DOCKER_NAME $IMAGE
-echo "export DOCKER_NAME=$DOCKER_NAME" >> $HOME/.bash_profile
 </code>
 
 
