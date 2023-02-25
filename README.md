@@ -111,6 +111,7 @@ journalctl -f  -u $DAEMON
 </code>
 
 ## backup-node-key
-BACKUP_DIR=$HOME/backup
+<code>BACKUP_DIR=$HOME/backup
 mkdir $BACKUP_DIR
 cp $DATA_DIR/secrets/node.key $BACKUP_DIR
+</code>
