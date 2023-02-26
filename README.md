@@ -23,7 +23,7 @@ DAEMON=firefulld
 DESCRIPTION="5irechain full node"
 </code>
 
-## update // 
+## update system // 
 <code>sudo apt update
 sudo apt upgrade -y
 sudo apt install -y curl jq
@@ -119,19 +119,24 @@ cp $DATA_DIR/secrets/node.key $BACKUP_DIR
 <code>sudo ufw allow 9933/tcp
 sudo ufw allow 9944/tcp
 sudo ufw allow 30333/tcp
-
 sudo ufw status | grep -e 9933 -e 9944 -e 30333
 </code>
 
 
 ##  useful commands
 see logs
-
 <code>journalctl -n 100 -f -u $DAEMON | grep -v \\
     -e "✨ Imported" \\
     -e "💤 Idle" \\
-    -e "♻ ️  Reorg"</code>
+    -e "♻ ️  Reorg"
+    </code>
 
 see node id 
+<code>curl --silent -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "system_localPeerId" }' http://localhost:9933 |jq ."result" 
+<code>
 
-<code>curl --silent -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "system_localPeerId" }' http://localhost:9933 |jq ."result"<code>
+## update node !TBL! 
+<code>update docker image
+copy new binary && chain
+</code>
+
