@@ -23,7 +23,7 @@ DAEMON=firefulld
 DESCRIPTION="5irechain full node"
 </code>
 
-## update //where is your uniform, general? :) // 
+## update // 
 <code>sudo apt update
 sudo apt upgrade -y
 sudo apt install -y curl jq
