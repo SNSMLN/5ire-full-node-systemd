@@ -123,10 +123,8 @@ cp $DATA_DIR/secrets/node.key $BACKUP_DIR
 
 ## open ports
 ```bash
-sudo ufw allow 9933/tcp
-sudo ufw allow 9944/tcp
 sudo ufw allow 30333/tcp
-sudo ufw status | grep -e 9933 -e 9944 -e 30333
+sudo ufw status | grep 30333
 ```
 
 ##  useful commands
